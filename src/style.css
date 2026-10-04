@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin : 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    
+}
+h1{
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px 0 30px;
+    color: #222;
+}
+.card {
+    width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+label {
+    display: inline;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+select,
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+.generate-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.generate-btn:hover{
+    background-color: #1d4ed8;
+}
+.card > div{
+    margin-bottom : 10px;
+}
+.qr-preview {
+    margin-top: 25px;
+    padding: 30px;
+    min-height: 250px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fafafa;
+}
+#qrpreview p{
+    margin-top: 0px;
+    font-size: 24px;
+}
+@media (max-width: 600px) {
+    .card {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+    #qrcode{
+        max-width: 100%;
+        overflow: hidden;
+    }
+    #qrcode img,
+    #qrcode canvas{
+        max-width:100%;
+        height: auto;
+    }
+    
+
+    .qr-preview {
+        padding: 20px;
+    }
+}
+select:focus,
+input:focus{
+    border-color: #2563eb;
+}
+.download-btn{
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #16a34a;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.download-btn:hover{
+    background-color: #15803d;
+}
+#wififields{
+    display : none;
+}
+#qrcode{
+    display: flex;
+    justify-content: center;
+    
+}
+#error {
+    color: red;
+}
+#ERROR{
+    color :red;
+    margin-top: 0px;
+}
+#Error{
+    color : red;
+    margin-top: 0px;
+}
+#presets{
+    margin-top: -15px;
+    margin-bottom: 25px;
+}
+#presets button{
+    padding :12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#downloaderror{
+    color:red;
+}
+.card{
+    animation: cardEntrance 0.6s ease-out;
+}
+@keyframes cardEntrance{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.qr-animate{
+    animation: qrAppear 0.35s ease-out;
+}
+@keyframes qrAppear{
+    from{
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.generate-btn,
+.download-btn{
+    transition: transform 0.2s ease;
+}
+.generate-btn:hover,
+.download-btn:hover{
+    transform: translateY(2px);
+}
+.shake{
+    animation : shake 0.3s ease;
+}
+@keyframes shake{
+    0%{
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translateX(-4px);
+    }
+    50%{
+        transform: translateX(4px);
+    }
+    75%{
+        transform: translateX(-3px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
